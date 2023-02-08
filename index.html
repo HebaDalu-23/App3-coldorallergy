@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to help determine if someone has an allergy or cold based on a couple of simple questions. However, this should not be used in place of a medical diagnosis/ 
  
 Known Issues:
-blah, blah, blah, blah
+blah, blah, blah
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -36,28 +36,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0; //creates variable to count allergies
-        var cold_count = 0; //creates variable to count colds
+        var allergy_count = 0; //This creates a variable to count allergies
+        var cold_count = 0; //This creates a variable to count colds
 
 
         function allergyAdd(){ 
             allergy_count = allergy_count + 1;
 		alert("allergy_count: " + allergy_count);
-        } // function created to keep track of the count of allergy symptoms and alert users of score towards allergy diagnosis
+        } // This function is created to keep track of the count of allergy symptoms and alert users of score towards allergy diagnosis
 
         function coldAdd(){
             cold_count = cold_count + 1;
 		alert("cold_count: " + cold_count);
-        } // function created to keep track of the count of cold symptoms and alert users of score towards cold diagnosis
+        } // This function is created to keep track of the count of cold symptoms and alert users of score towards cold diagnosis
 	
 	function displayResults (){ 
-	var coldPercentage = (allergy_count / 4) * 100; // variable to calculate percentage of cold symptoms
-	var allergyPercentage = (cold_count / 4) * 100; //varibale to calculate percentage of allergy symptoms
+	var coldPercentage = (allergy_count / 4) * 100; // This variable is created to calculate percentage of cold symptoms
+	var allergyPercentage = (cold_count / 4) * 100; //This varibale is created to calculate percentage of allergy symptoms
 	
 	var resultText= document. getElementById("results"); 
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "<br> Probability it is a cold =" + coldPercentage; 
-	// variable that combines allergy and cold scores and gives it an id to display
-	}; // creates function to calculate and display results at the end
+	// This variable combines allergy and cold scores and gives it an id to display
+	}; // This creates the function to calculate and display results at the end
 
   </script>
 
@@ -87,13 +87,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1> <!--this creates a header-->
+	<h1>Cold or Allergies?</h1> <!--This creates a header-->
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--This is for the content of the header-->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--this creates a button to go to next page-->
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--This creates a button to get started and go to next page-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -103,60 +103,60 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are your eyes watery or itchy?</h1>
+		<h1>Are your eyes watery or itchy?</h1> <!--This line of code is for the first question-->
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p><a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--adds count-->
-	<p><a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>    
+    	<div id="content" class="w3-container"> <!--This line of code helps create the content for the first question-->
+        <p><a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--When clicked, this adds a count towards allergy and tells it to go to the next page-->
+	<p><a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>   <!--When clicked, this adds a count towards cold and tells it to go to the next page-->
     	</div>
 </div>
-<!--comment--> 
-<div class="page" id="two">
+<!--Dividers are placed between pages--> 
+<div class="page" id="two"> <!--This is the next page-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Do you have a fever?</h1> <!--This line of code is for the second question-->
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p><a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<p><a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> 
+	<div id="content" class="w3-container"> <!--This line of code helps create the content for the second question-->
+	<p><a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--When clicked, this adds a count towards cold and tells it to go to the next page-->
+	<p><a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--When clicked, this adds a count towards allergy and tells it to go to the next page-->
 		
 	</div>	
 </div>
 
-<div class="page" id="three">
+<div class="page" id="three"> <!--This is the next page-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a sore throat?</h1>
+		<h1>Do you have a sore throat?</h1> <!--This line of code is for the third question-->
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p><a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<p><a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+    	<div id="content" class="w3-container"> <!--This line of code helps create the content for the third question-->
+        <p><a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--When clicked, this adds a count towards cold and tells it to go to the next page-->
+	<p><a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--When clicked, this adds a count towards allergy and tells it to go to the next page-->
 			
 	</div>
 </div>	
-	<div class="page" id="four">
+	<div class="page" id="four"> <!--This is the next page-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Are your symptoms seasonal or chronic?</h1> <!--This line of code is for the fourth question-->
 
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p><a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal </a>
-	<p><a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic </a>
+    	<div id="content" class="w3-container"> <!--This line of code helps create the content for the fourth question-->
+        <p><a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal </a> <!--When clicked, this adds a count towards allergy and tells it to go to the next page-->
+	<p><a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic </a> <!--When clicked, this adds a count towards cold and tells it to go to the next page-->
 				
 	</div>
 </div>	
-	<div class="page" id="five">
+	<div class="page" id="five"> <!--This is the next and final page-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>	
+		<h1>Results</h1> <!--This line of code is for the results page-->
 
 	</div>
 		
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!--This is the next and final page-->
 		<p> Results </p> 
-		<a onclick="displayResults();" class="w3-btn w3-black"> Get Results </a>
-		<p id="results"></p>	
+		<a onclick="displayResults();" class="w3-btn w3-black"> Get Results </a> <!--When clicked, takes users to get their results-->
+		<p id="results"></p>	<!--This codes for the results id-->
 		
 	</div>
 		
