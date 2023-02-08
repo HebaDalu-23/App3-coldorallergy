@@ -42,12 +42,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-
+		alert("allergy_count: " + allergy_count);
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert("cold_count: " + cold_count);
         }
+	
 	function results (){
 	var total = allergy_count + cold_count;
 	alert("Allergy Percentage: " + (allergy_count / total) * 100 +
@@ -55,6 +57,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var resultText= document. getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "<br> Probability it is a cold =" + coldPercentage; 
 	
+	}
 
   </script>
 
@@ -108,7 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p><a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>    
     	</div>
 </div>
-
+<!--comment--> 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Do you have a fever?</h1>
@@ -159,6 +162,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>The End</h1>
+</div>
 		
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
