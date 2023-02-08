@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Heba Dalu
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -36,28 +36,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; //creates variable to count allergies
+        var cold_count = 0; //creates variable to count colds
 
 
-        function allergyAdd(){
+        function allergyAdd(){ 
             allergy_count = allergy_count + 1;
 		alert("allergy_count: " + allergy_count);
-        }
+        } // function created to keep track of the count of allergy symptoms and alert users of score towards allergy diagnosis
 
         function coldAdd(){
             cold_count = cold_count + 1;
 		alert("cold_count: " + cold_count);
-        }
+        } // function created to keep track of the count of cold symptoms and alert users of score towards cold diagnosis
 	
-	function displayResults (){
-	var coldPercentage = (allergy_count / 4) * 100;
-	var allergyPercentage = (cold_count / 4) * 100;
+	function displayResults (){ 
+	var coldPercentage = (allergy_count / 4) * 100; // variable to calculate percentage of cold symptoms
+	var allergyPercentage = (cold_count / 4) * 100; //varibale to calculate percentage of allergy symptoms
 	
-	var resultText= document. getElementById("results");
+	var resultText= document. getElementById("results"); 
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercentage + "<br> Probability it is a cold =" + coldPercentage; 
-	
-	};
+	// variable that combines allergy and cold scores and gives it an id to display
+	}; // creates function to calculate and display results at the end
 
   </script>
 
@@ -87,13 +87,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Allergies?</h1> <!--this creates a header-->
 </div>
 	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--this creates a button to go to next page-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -107,7 +107,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p><a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+        <p><a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--adds count-->
 	<p><a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>    
     	</div>
 </div>
@@ -118,8 +118,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p><a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<p><a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> No </a> 
+	<p><a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<p><a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> 
 		
 	</div>	
 </div>
@@ -130,8 +130,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p><a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<p><a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+        <p><a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<p><a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 			
 	</div>
 </div>	
